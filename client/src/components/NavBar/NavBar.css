@@ -1,0 +1,47 @@
+.NavBarContainer {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(75, 162, 233);
+    -webkit-box-shadow: inset 0px 3px 24px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 3px 24px -11px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 3px 24px -11px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.NavBarUserInfoDiv {
+    display: flex;
+    align-items: center;
+}
+
+.NavBarUserEmail {
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+.NavBarUserPicture {
+    margin-right: 30px;
+    border-radius: 50%;
+    height: 50px;
+}
+
+.NavBarLogout {
+    padding-top: 15px;
+    width: 120px;
+    box-sizing: border-box;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: 0.2s ease-out;
+}
+
+.NavBarLogout:hover {
+    cursor: pointer;
+    background-color: rgb(53, 113, 161);
+}

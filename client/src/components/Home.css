@@ -1,0 +1,62 @@
+.HomeContainer {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.HomeContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 92vh;
+}
+
+.SideMenuContainer {
+    text-align: left;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(236, 236, 236);
+    box-sizing: border-box;
+    padding: 15px 40px 30px 40px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.SideMenuHeading {
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(78, 78, 78);
+}
+
+.SideMenuUl {
+    flex: 1 1;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.SideMenuUl li {
+    font-weight: 200;
+    color: rgb(78, 78, 78);
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    transition: 0.2s ease-out;
+}
+
+.SideMenuUl li:hover {
+    cursor: pointer;
+    background-color: rgb(197, 197, 197);
+}
+
+.DashboardContainer {
+    padding-top: 15px;
+    padding-right: 30px;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+
+}

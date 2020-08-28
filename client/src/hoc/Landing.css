@@ -1,0 +1,358 @@
+.LandingContainer {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.LandingBakcgroundImage {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width : 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    animation: backgroundImage 2s ease-out forwards;
+}
+
+.LandingContentContainer {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.LandingHeadeingDiv {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    margin: 0;
+    text-align: left;
+}
+
+.LandingHeading {
+    font-size: 85px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(66, 66, 66, 0.644);
+    margin: 0;
+    opacity: 0;
+    animation: headingOne 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.LandingHeading:hover {
+    cursor: default;
+}
+
+@keyframes headingOne {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.LandingParagraph {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(66, 66, 66, 0.644);
+    margin-left: 50px;
+    margin-top: 50px;
+    opacity: 0;
+    animation: paragraph 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes paragraph {
+    0% {
+        transform: translateY(100px);
+    }
+
+    60%{
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.LandingParagraph:hover {
+    cursor: default;
+}
+
+.LandingLoginButton {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 50px;
+    width: 280px;
+    height: 50px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: 0.2s ease-out;
+    opacity: 0;
+    animation: button 1s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+.LandingLoginButton:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.LandingLoginButton:active {
+    transform: scale(0.95);
+}
+
+@keyframes button {
+    60%{
+        opacity: 0;
+    }
+
+    60% {
+        background-color: rgb(0, 174, 255);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.904);
+        opacity: 1;
+    }
+}
+
+.LandingLoginButton a{
+    font-family: 'Alata', sans-serif;
+    position: absolute;
+    text-decoration: none;
+    font-size: 25px;
+    color: #003d66;
+    padding: 0 20px;
+    z-index: 2;
+    left: 0;
+    top: 14%;
+    opacity: 0;
+    animation: ancorTag 1s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes ancorTag {
+    60%{
+        opacity: 0;
+    }
+
+    80% {
+       color: white;
+    }
+
+    100% {
+        color: #003d66;
+        opacity: 1;
+    }
+}
+
+.arrowIcon {
+    position: absolute;
+    font-size: 30px;
+    color: #003d66;
+    z-index: 1;
+    right: 15%;
+    top: 25%;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.LandingLoginButton:hover .arrowIcon{
+    opacity: 1;
+    right: 5%;
+}
+
+.googleIcon {
+    font-size: 31px;
+    color: rgba(255, 255, 255, 0.904);
+    margin-left: 290px;
+    margin-top: 5px;
+    opacity: 0;
+    transition: 0.3s ease-out;
+}
+
+.LandingLoginButton:hover .googleIcon{
+    opacity: 1;
+}
+
+.LandingComputerImage {
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    right: 13%;
+    width: 450px;
+    transition: 0.3s ease-out;
+    opacity: 0;
+    animation: computer 0.7s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.LandingComputerImage:hover {
+    right: 15%;
+    top: 1%;
+}
+
+.LandingPhoneImage {
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    right: 3%;
+    width: 250px;
+    transition: 0.3s ease-out;
+    opacity: 0;
+    animation: phone 0.7s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.LandingPhoneImage:hover {
+    top: 25%;
+}
+
+@keyframes computer {
+    0% {
+        transform: translateX(-100px);
+    }
+    80%{
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes phone {
+    0% {
+        transform: translateX(100px);
+    }
+    80%{
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.LandingHeadingSecond {
+    position: absolute;
+    text-align: left;
+    top: 65%;
+    right: 10%;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(66, 66, 66, 0.644);
+    margin: 0;
+    padding: 20px 100px 20px 20px;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    animation: headingSecond 1.1s ease-out forwards;
+    animation-delay: 3s;
+}
+
+.LandingHeadingSecond:hover {
+    cursor: default;
+}
+
+@keyframes headingSecond {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    30%{
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 0.8;
+        border-left: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-radius: 5px;
+    }
+
+    100% {
+        border-left: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes backgroundImage {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,61 @@
+.ConfirmContainer {
+    position: absolute;
+    width: 500px;
+    z-index: 80;
+    top: 30%;
+    left: 40%;
+    background-color: white;
+    border-radius: 5px;
+    padding-bottom: 40px;
+}
+
+.ConfirmContainer h2 {
+    font-size: 25px;
+    font-weight: 200;
+    color: rgb(78, 78, 78);
+    margin-bottom: 40px;
+}
+
+.ConfirmButtonsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ConfirmButtonsDiv button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    width: 100px;
+    padding: 10px 0;
+    color: white;
+    box-shadow: 2px 2px 2px lightgray;
+    border-radius: 5px;
+    transition: 0.2s ease-out;
+}
+
+.ConfirmButtonsDiv button:hover {
+    cursor: pointer;
+}
+
+.ConfirmButtonsDiv button:active {
+    transform: translateY(5px);
+}
+
+.ConfirmYesButton {
+    background-color: rgb(58, 134, 233);
+}
+
+.ConfirmYesButton:hover {
+    background-color: rgb(48, 108, 185);
+}
+
+.ConfirmNoButton {
+    background-color: rgb(233, 58, 58);
+}
+
+.ConfirmNoButton:hover {
+    background-color: rgb(182, 51, 51);
+}

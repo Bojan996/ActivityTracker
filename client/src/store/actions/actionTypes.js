@@ -1,0 +1,5 @@
+export const FETCH_USER = 'FETCH_USER';
+
+export const FETCH_TASKS_START = 'FETCH_TASKS_START';
+export const FETCHED_TASKS = 'FETCHED_TASKS';
+export const FETCH_TASKS_ERROR = 'FETCH_TASKS_ERROR';
