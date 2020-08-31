@@ -5,7 +5,12 @@ const List = (props) => {
 
     const deleteHandler = () => {
         props.takeId(props.id);
-        props.showConfirm();
+        props.showDeleteConfirm();
+    }
+
+    const finishHandler = () => {
+        props.takeId(props.id);
+        props.showFinishConfirm();
     }
 
     let expiredQuestion = (
@@ -33,7 +38,7 @@ const List = (props) => {
             </div>
             <div className='ListIcons'>
                 <button className='ListDeleteButton' onClick={deleteHandler}><i className="far fa-trash-alt"></i></button>
-                <button className='ListDoneButton' disabled={props.expired}><i className='far fa-check-circle'></i></button>
+                <button className='ListDoneButton' disabled={props.expired} onClick={finishHandler}><i className='far fa-check-circle'></i></button>
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import * as actions from '../store/actions';
 
 import { dashboard } from '../helpers/dashboardSwitch';
 import NavBar from './NavBar/NavBar';
+import Loader from './UI/Loader/Loader';
 
 const Home = (props) => {
 
@@ -12,7 +13,8 @@ const Home = (props) => {
 
     useEffect(() => {
         props.fetchingTasks();
-    }, [props]);
+        // eslint-disable-next-line 
+    }, []);
 
     return (
         <div className='HomeContainer'>
@@ -29,7 +31,12 @@ const Home = (props) => {
                     </ul>
                 </div>
                 <div className='DashboardContainer'>
-                    {dashboard(menu)}
+                    {
+                        props.loadingTasks ?
+                        <Loader/>
+                        :
+                        dashboard(menu)
+                    }
                 </div>
             </div>
         </div>
@@ -40,6 +47,7 @@ const Home = (props) => {
 const mapStateToProps = state => ({
     email: state.auth.user.email,
     picture: state.auth.user.picture,
+    loadingTasks: state.tasks.loading
 })
 
 export default connect(mapStateToProps, actions)(Home);
