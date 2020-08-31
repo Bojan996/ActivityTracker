@@ -34,7 +34,7 @@ require('./routes/authRoutes')(app);
 require('./routes/taskRoutes')(app);
 
 //Configurating the production routing environment
-if(process.env.NODE_ENV === 'producton'){
+if(process.env.NODE_ENV === 'production'){
     //Express will use assets files like main.js or main.css
     app.use(express.static('client/build'));
 
