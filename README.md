@@ -12,4 +12,4 @@ Even though the project is not yet finished, it has some features already when l
 
 The whole idea of the app is to make 1 place where a user can keep track of many sorts of activities that he plans to do, for example leave links of movies he wants to watch, make Travel plans and compare prices, things he wants to buy and in the end show a money graph which displays user expenses. 
 
-In the end we all know how many times a week we say oh I want to do this, buy that, go there, watch that but it seems that we always forget half of it. This App is a good solution to that problem, just write it down, it takes 30 seconds, and when the time comes, open it and enjoy your ideas 
+In the end we all know how many times a week we say oh I want to do this, buy that, go there, watch that but it seems that we always forget half of it. This App is a good solution to that problem, just write it down, it takes 30 seconds, and when the time comes, open it and enjoy your ideas :)
