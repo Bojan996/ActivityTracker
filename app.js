@@ -25,6 +25,9 @@ app.use(passport.session());
 require('./services/mongoose');
 require('./models/users');
 require('./models/toDo');
+require('./models/toWatch');
+require('./models/toBuy');
+require('./models/toTravel');
 
 //Passport setup
 require('./services/passport');

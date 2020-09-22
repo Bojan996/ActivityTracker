@@ -1,15 +1,15 @@
-.ToDoContainer {
+.DashboardContainer {
     width: 100%;
 }
 
-.ToDoHeadingSection {
+.DashboardHeadingSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px 0 40px 0;
 }
 
-.ToDoHeader {
+.DashboardHeader {
     font-size: 30px;
     font-weight: 200;
     color: rgb(78, 78, 78);
@@ -28,11 +28,16 @@
     border-radius: 5px;
 }
 
-.NewButton:hover {
+.NewButton:hover:not(:disabled) {
     cursor: pointer;
 }
 
-.ToDoListSection {
+.NewButton:disabled {
+    cursor: not-allowed;
+    background-color: lightgray;
+}
+
+.DashboardListSection {
     width: 100%;
     max-height: 570px;
     overflow: auto;

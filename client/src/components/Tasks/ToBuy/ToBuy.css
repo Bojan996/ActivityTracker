@@ -1,0 +1,95 @@
+.ToBuyContainer {
+    position: relative;
+    margin: 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+}
+
+.Done {
+    background-color: rgba(40, 202, 40, 0.678);
+}
+
+.ToBuyContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.ToBuyContent h2 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(78, 78, 78);
+}
+
+.ToBuyContent h3 {
+    font-size: 15px;
+    font-weight: 200;
+    color: gray;
+}
+
+.ToBuyIcons {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px 10px 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.ToBuyIcons button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    color: gray;
+    transition: 0.2s ease-out;
+}
+
+.ToBuyIcons button:hover:not(:disabled) {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.ToBuyIcons button:active:not(:disabled)  {
+    transform: translateY(5px);
+}
+
+.ToBuyIcons button:disabled {
+    cursor: not-allowed;
+}
+
+.ToBuyDeleteButton:hover {
+    color: rgb(233, 58, 58);
+}
+
+.ToBuyDoneButton:hover:not(:disabled) {
+    color: rgb(1, 177, 1);
+}
+
+.ToBuyIcons button:hover:not(:disabled)::after {
+    left: -75px;
+    top: 4px;
+    position: absolute;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(116, 116, 116);
+}
+
+.ToBuyDeleteButton:hover::after {
+    content: "Delete task";
+}
+
+.ToBuyDoneButton:hover:not(:disabled)::after {
+    content: "Finish task";
+}

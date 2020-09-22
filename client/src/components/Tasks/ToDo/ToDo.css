@@ -1,4 +1,4 @@
-.ListContainer {
+.ToDoContainer {
     position: relative;
     margin: 15px 0;
     padding-bottom: 10px;
@@ -19,7 +19,7 @@
     background-color: rgba(245, 0, 0, 0.644);
 }
 
-.ListContent {
+.ToDoContent {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,20 +28,20 @@
     padding-top: 10px;
 }
 
-.ListContent h2 {
+.ToDoContent h2 {
     margin-top: 0;
     font-size: 30px;
     font-weight: 200;
     color: rgb(78, 78, 78);
 }
 
-.ListContent h3 {
+.ToDoContent h3 {
     font-size: 15px;
     font-weight: 200;
     color: gray;
 }
 
-.ListIcons {
+.ToDoIcons {
     height: 100%;
     box-sizing: border-box;
     padding: 15px 10px 15px 0;
@@ -51,7 +51,7 @@
     align-items: flex-end;
 }
 
-.ListIcons button{
+.ToDoIcons button{
     border: none;
     outline: none;
     background-color: transparent;
@@ -60,28 +60,28 @@
     transition: 0.2s ease-out;
 }
 
-.ListIcons button:hover:not(:disabled) {
+.ToDoIcons button:hover:not(:disabled) {
     cursor: pointer;
     transform: scale(1.3);
 }
 
-.ListIcons button:active:not(:disabled)  {
+.ToDoIcons button:active:not(:disabled)  {
     transform: translateY(5px);
 }
 
-.ListIcons button:disabled {
+.ToDoIcons button:disabled {
     cursor: not-allowed;
 }
 
-.ListDeleteButton:hover {
+.ToDoDeleteButton:hover {
     color: rgb(233, 58, 58);
 }
 
-.ListDoneButton:hover:not(:disabled) {
+.ToDoDoneButton:hover:not(:disabled) {
     color: rgb(1, 177, 1);
 }
 
-.ListIcons button:hover:not(:disabled)::after {
+.ToDoIcons button:hover:not(:disabled)::after {
     left: -75px;
     top: 4px;
     position: absolute;
@@ -90,15 +90,15 @@
     color: rgb(116, 116, 116);
 }
 
-.ListDeleteButton:hover::after {
+.ToDoDeleteButton:hover::after {
     content: "Delete task";
 }
 
-.ListDoneButton:hover:not(:disabled)::after {
+.ToDoDoneButton:hover:not(:disabled)::after {
     content: "Finish task";
 }
 
-.ListExpired {
+.ToDoExpired {
     position: absolute;
     z-index: 60;
     top: 0;
@@ -108,7 +108,7 @@
     background-color: rgba(255, 255, 255, 0.651);
 }
 
-.ListExpired h2 {
+.ToDoExpired h2 {
     text-align: center;
     font-size: 25px;
     font-weight: 200;
@@ -117,7 +117,7 @@
     margin-bottom: 30px;
 }
 
-.ListExpiredButtonDiv {
+.ToDoExpiredButtonDiv {
     width: 50%;
     margin: 0 auto;
     display: flex;
@@ -125,7 +125,7 @@
     align-items: center;
 }
 
-.ListExpiredButtonDiv button {
+.ToDoExpiredButtonDiv button {
     outline: none;
     border: none;
     font-size: 20px;
@@ -138,26 +138,26 @@
     transition: 0.2s ease-out;
 }
 
-.ListExpiredButtonDiv button:hover {
+.ToDoExpiredButtonDiv button:hover {
     cursor: pointer;
 }
 
-.ListExpiredButtonDiv button:active {
+.ToDoExpiredButtonDiv button:active {
     transform: translateY(5px);
 }
 
-.ConfirmYesButton {
+.ToDoConfirmYesButton {
     background-color: rgb(58, 134, 233);
 }
 
-.ConfirmYesButton:hover {
+.ToDoConfirmYesButton:hover {
     background-color: rgb(48, 108, 185);
 }
 
-.ConfirmNoButton {
+.ToDoConfirmNoButton {
     background-color: rgb(233, 58, 58);
 }
 
-.ConfirmNoButton:hover {
+.ToDoConfirmNoButton:hover {
     background-color: rgb(182, 51, 51);
 }

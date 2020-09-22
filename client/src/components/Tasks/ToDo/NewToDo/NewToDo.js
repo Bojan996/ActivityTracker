@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import DatePicker from "react-datepicker";
 
 
-const NewToDo = (props) => {
+const NewToDo = ({ fetch, close }) => {
 
     const [what, setWhat] = useState('');
     const [selectedDate, setSelectedDate] = useState(new Date());
@@ -23,8 +23,8 @@ const NewToDo = (props) => {
             dateEnd: selectedDate.getTime()
         });
         try{
-            props.fetch();
-            props.close();
+            close();
+            fetch();
         }catch(err) {
             alert(err);
         }
@@ -34,12 +34,12 @@ const NewToDo = (props) => {
         <div className='NewToDoContainer'>
             <h1>Add new To Do</h1>
             <div className='NewToDoInfoDiv'>
-                <TextField id="outlined-basic" label="What to do?" variant="outlined" onChange={(event) => setWhat(event.target.value)}/>
+                <TextField style={{marginBottom: '20px'}} id="outlined-basic" label="What to do?" variant="outlined" onChange={(event) => setWhat(event.target.value)}/>
                 <DatePicker
                     selected={selectedDate}
                     onChange={handleChange}
                 />
-                <button onClick={addHandler} className='AddButton'>Add</button>
+                <button style={{marginTop: '20px'}} onClick={addHandler} className='AddButton'>Add</button>
             </div>
         </div>
     );

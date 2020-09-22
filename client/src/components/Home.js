@@ -3,13 +3,13 @@ import './Home.css';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions';
 
-import { dashboard } from '../helpers/dashboardSwitch';
+import Dashboard from './Dashboard/Dashboard';
 import NavBar from './NavBar/NavBar';
 import Loader from './UI/Loader/Loader';
 
 const Home = (props) => {
 
-    const [menu, setMenu] = useState('To do');
+    const [menu, setMenu] = useState('todo');
 
     useEffect(() => {
         props.fetchingTasks();
@@ -23,11 +23,11 @@ const Home = (props) => {
                 <div className='SideMenuContainer'>
                     <h1 className='SideMenuHeading'>Catergories</h1>
                     <ul className='SideMenuUl'>
-                        <li onClick={() => setMenu('To do')}>To do</li>
-                        <li onClick={() => setMenu('To watch')}>To watch</li>
-                        <li onClick={() => setMenu('To buy')}>To buy</li>
-                        <li onClick={() => setMenu('To travel')}>To travel</li>
-                        <li onClick={() => setMenu('Money Graph')}>Money Graph</li>
+                        <li onClick={() => setMenu('todo')}>To do</li>
+                        <li onClick={() => setMenu('towatch')}>To watch</li>
+                        <li onClick={() => setMenu('tobuy')}>To buy</li>
+                        <li onClick={() => setMenu('totravel')}>To travel</li>
+                        <li>Money Graph</li>
                     </ul>
                 </div>
                 <div className='DashboardContainer'>
@@ -35,7 +35,7 @@ const Home = (props) => {
                         props.loadingTasks ?
                         <Loader/>
                         :
-                        dashboard(menu)
+                        <Dashboard type={menu}/>
                     }
                 </div>
             </div>

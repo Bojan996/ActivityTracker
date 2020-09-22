@@ -15,14 +15,17 @@ export const fetchUser = () => async dispatch => {
     }
 }
 
-//TASKS
+//FETCHING ALL TASKS
 const fetchTasksStart = () => ({
     type: actionTypes.FETCH_TASKS_START
 });
 
-const fetchedTasks = (toDo) => ({
+const fetchedTasks = (toDo, toBuy, toWatch, toTravel) => ({
     type: actionTypes.FETCHED_TASKS,
-    toDo
+    toDo,
+    toBuy,
+    toWatch,
+    toTravel
 });
 
 const fetchTasksError = (error) => ({
@@ -32,11 +35,62 @@ const fetchTasksError = (error) => ({
 
 export const fetchingTasks = () => async dispatch => {
     dispatch(fetchTasksStart());
-    const res = await axios.get('/api/todo');
+    const todo = await axios.get('/api/todo');
+    const towatch = await axios.get('/api/towatch');
+    const tobuy = await axios.get('/api/tobuy');
+    const totravel = await axios.get('/api/totravel');
     try {
-        dispatch(fetchedTasks(res.data))
-    } catch(error){
-        dispatch(fetchTasksError(error));
+        dispatch(fetchedTasks(todo.data, tobuy.data, towatch.data, totravel.data));
+    } catch(err){
+        dispatch(fetchTasksError(err));
+    }
+}
+
+//INDIVIDUAL TASKS
+
+const fetchToDo = (toDo) => ({
+    type: actionTypes.FETCHED_TODO,
+    toDo
+});
+
+const fetchToBuy = (toBuy) => ({
+    type: actionTypes.FETCHED_BUY,
+    toBuy
+});
+
+const fetchToTravel = (toTravel) => ({
+    type: actionTypes.FETCHED_TRAVEL,
+    toTravel
+});
+
+const fetchToWatch = (toWatch) => ({
+    type: actionTypes.FETCHED_WATCH,
+    toWatch
+});
+
+
+export const fetchIndividualTask = (task) => async dispatch => {
+    dispatch(fetchTasksStart());
+    const res = await axios.get(`/api/${task}`);
+    try {
+        switch(task){
+            case 'todo':
+                dispatch(fetchToDo(res.data));
+                break;
+            case 'tobuy':
+                dispatch(fetchToBuy(res.data));
+                break;
+            case 'totravel':
+                dispatch(fetchToTravel(res.data));
+                break;
+            case 'towatch':
+                dispatch(fetchToWatch(res.data));
+                break;
+            default:
+                break;
+        }
+    } catch (err) {
+        dispatch(fetchTasksError(err));
     }
 }
 

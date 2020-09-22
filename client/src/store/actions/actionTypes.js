@@ -2,4 +2,8 @@ export const FETCH_USER = 'FETCH_USER';
 
 export const FETCH_TASKS_START = 'FETCH_TASKS_START';
 export const FETCHED_TASKS = 'FETCHED_TASKS';
+export const FETCHED_TODO = 'FETCHED_TODO';
+export const FETCHED_BUY = 'FETCHED_BUY';
+export const FETCHED_TRAVEL = 'FETCHED_TRAVEL';
+export const FETCHED_WATCH = 'FETCHED_WATCH';
 export const FETCH_TASKS_ERROR = 'FETCH_TASKS_ERROR';
