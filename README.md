@@ -3,6 +3,7 @@
 Before proceeding please note that the app is not yet finished! This is my latest project but due to my constant engagement in another company I didn’t yet have time to fully work on it. But still, it is definitely worth having a look.
 
 To see the App in action: https://secret-sierra-87653.herokuapp.com/
+To start the App from custom machine run: "npm install" in the root folder, then go to client and run the same command, then go back to root folder and run "npm run dev"
 
 This is a MERN stack app which I started making in order to practice the connection between backend and frontend, as well as to get familiar with production and development environments. 
 
